@@ -5,6 +5,8 @@ services:
       context: .
     ports:
       - '3000:3000'
+    labels:
+  - 'traefik.http.middlewares.mybasicauth.basicauth.users=Junaid@69:j9SSRH237jazLCaZoAmD'
     volumes:
       - data:/home/perplexica/data
     restart: unless-stopped
